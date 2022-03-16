@@ -21,7 +21,7 @@ def home(request):
 @login_required(login_url='/accounts/login/') 
 def rate_project(request,project_id):
     project=Project.objects.get(id=project_id)
-    return render(request,"awwards/project.html",{"projects":projects})
+    return render(request,"awwards/project.html",{'projects':projects})
 
 @login_required(login_url='/accounts/login/') 
 def view_profile(request):
