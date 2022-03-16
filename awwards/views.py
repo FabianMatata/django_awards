@@ -19,7 +19,7 @@ def home(request):
 
 def home(request):
     projects=Project.objects.all()
-    return render(request,'awwards/home.html',{'projects':projects})
+    return render(request,'awwards/home.html',{'projects':project})
 
 @login_required(login_url='/accounts/login/') 
 def rate_project(request,project_id):
