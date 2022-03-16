@@ -4,7 +4,6 @@ from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from .models import Profile,Project
 from .forms import NewProjectForm,ProfileUpdateForm
-from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 from rest_framework import status
