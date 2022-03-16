@@ -14,8 +14,9 @@ from .serializer import ProfileSerializer,ProjectSerializer
 
 # Create your views here.
 def home(request):
-    project=Project.objects.all()
-    return render(request,"awwards/home.html",{'project':project})
+    projects=Project.objects.all()
+    # return render(request,"awwards/home.html",{'project':project})
+    return render(request,'awwards/home.html',{'projects':projects})
 
 @login_required(login_url='/accounts/login/') 
 def rate_project(request,project_id):
