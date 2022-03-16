@@ -14,6 +14,10 @@ from .serializer import ProfileSerializer,ProjectSerializer
 
 # Create your views here.
 def home(request):
+    Projects=project.objects.all()
+    return render(request,'awwards/home.html',{'Projects':project})
+
+def home(request):
     projects=Project.objects.all()
     return render(request,'awwards/home.html',{'projects':projects})
 
