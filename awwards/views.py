@@ -13,6 +13,7 @@ from rest_framework.views import APIView
 from .serializer import ProfileSerializer,ProjectSerializer
 
 # Create your views here.
+    # return render(request,'awwards/home.html',{'projects':projects})
 def home(request):
     projects=Project.objects.all()
     # return render(request,"awwards/home.html",{'project':project})
