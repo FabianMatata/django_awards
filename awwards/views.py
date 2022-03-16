@@ -19,13 +19,13 @@ def home(request):
 
 @login_required(login_url='/accounts/login/') 
 def rate_project(request,project_id):
-    projects=Project.objects.get(id=project_id)
+    project=Project.objects.get(id=project_id)
     return render(request,"awwards/project.html",{"project":project})
 
 
 @login_required(login_url='/accounts/login/') 
 def view_profile(request):
-    projects=request.user.profile.project_set.all() 
+    project=request.user.profile.project_set.all() 
     profile=request.user.profile
     
     form=ProfileUpdateForm(instance=profile)
@@ -36,7 +36,7 @@ def view_profile(request):
             form.save()
     context={
         'form':form,
-        'projects':projects,
+        'project':project,
     }
     return render(request,"awwards/profile.html",context=context)
 
