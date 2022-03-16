@@ -29,7 +29,7 @@
             <h5 class="text-uppercase font-weight-bold"><strong> Nominees</strong> We need your vote!</h5>
         </div>
         
-        <div class="container">
+        <!-- <div class="container">
             <h3 style="color:#535250;text-align:center;"><strong>Submitted </strong> Sites </h3><br><br>
             {% for project in projects %}
             <div class="col-lg-4 col-lg-4 col-lg-4">
@@ -38,6 +38,22 @@
                     <div class="card-text text-center" style="padding: 10px;">
                         <h4 style="font-weight: bold;">{{project.name}}</h4>
                         <small class="text-muted" style="font-family: Arial, Helvetica, sans-serif;">{{project.description | slice:":100"}}...</small><br><br>
+                        <a class="btn btn-info" style="border-radius: 25px;" href="/awwards/project/{{project.id}}" >Project details & Rating</a><br><br>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div><br><br> -->
+
+        <div class="container">
+            <h3 style="color:#535250;text-align:center;"><strong>Submitted </strong> Sites </h3><br><br>
+            {% for project in projects %}
+            <div class="col-lg-4 col-lg-4 col-lg-4">
+                <div class="card ">
+                    <img src="{{project.webimage.url}}"  class="card-img-top img-fluid" alt="{{project.name}}" >
+                    <div class="card-text text-center" style="padding: 20px;">
+                        <h4 style="font-weight: bold;">{{project.name}}</h4>
+                        <small class="text-muted" style="font-family: Arial, Helvetica, sans-serif;">{{project.description | slice:":100" }}...</small><br><br>
                         <a class="btn btn-info" style="border-radius: 25px;" href="/awwards/project/{{project.id}}" >Project details & Rating</a><br><br>
                     </div>
                 </div>
