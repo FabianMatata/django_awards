@@ -308,8 +308,6 @@ DATABASES = {
         'NAME': 'awwards',
         # 'USER': 'fabian',
         # 'PASSWORD': 'password',
-        # 'USER': 'msyoki',
-        # 'PASSWORD': 'psql20*',
     }
 }
 
