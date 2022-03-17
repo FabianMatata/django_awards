@@ -8,8 +8,8 @@
 This project allows users to post their projects for other users to rate according to design, usability and content 
 
 ##  Live Link  
+https://django-awards.herokuapp.com/
   
- 
 ## User Story  
 * A user can view posted projects and their details.  
 * A user can post a project to be rated/reviewed. 
