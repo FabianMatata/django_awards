@@ -26,9 +26,6 @@ To get the project .......
  ```bash 
 https://github.com/FabianMatata/django_awards
 ```
-##### Navigate into the folder and install requirements  
- ```bash 
-```
 ##### Install and activate Virtual  
  ```bash 
 - python3 -m venv virtual - source virtual/bin/activate  
@@ -39,8 +36,7 @@ https://github.com/FabianMatata/django_awards
 ```  
  ##### Setup Database  
   SetUp your database User,Password, Host then make migrate  
- ```bash 
- ``` 
+ 
  Now Migrate  
  ```bash 
  python manage.py migrate 
