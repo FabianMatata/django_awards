@@ -24,7 +24,7 @@ To get the project .......
   
 ##### Cloning the repository:  
  ```bash 
-
+https://github.com/FabianMatata/django_awards
 ```
 ##### Navigate into the folder and install requirements  
  ```bash 
