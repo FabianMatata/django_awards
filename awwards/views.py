@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
-from .models import Profile,Project
+from .models import Profile,project
 from .forms import NewProjectForm,ProfileUpdateForm
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
@@ -14,8 +14,8 @@ from .serializer import ProfileSerializer,ProjectSerializer
 
 # Create your views here.
 def home(request):
-    projects=Project.objects.all()
-    return render(request,'awwards/home.html',{'projects':projects})
+    projects=project.objects.all()
+    return render(request,'awwards/home.html',{'project':projects})
 
 @login_required(login_url='/accounts/login/') 
 def rate_project(request,project_id):

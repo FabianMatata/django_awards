@@ -16,7 +16,7 @@ class Profile(models.Model):
     def __str__(self):
         return self.name
 
-class Project(models.Model):
+class project(models.Model):
     webimage= models.ImageField(upload_to='webimage/',null=True)
     profile = models.ForeignKey(Profile,on_delete=models.CASCADE, null=True)
     name= models.CharField(max_length=70)
@@ -45,7 +45,7 @@ class Project(models.Model):
         return self.name
 
 class Rating(models.Model):
-    project = models.ForeignKey(Project, on_delete=models.CASCADE)
+    project = models.ForeignKey(project, on_delete=models.CASCADE)
     user = models.ForeignKey(User,on_delete=models.CASCADE)
     design=models.IntegerField(validators=[MinValueValidator(1),MaxValueValidator(10)])
     content=models.IntegerField(validators=[MinValueValidator(1),MaxValueValidator(10)])

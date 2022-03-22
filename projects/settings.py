@@ -46,7 +46,9 @@ SECRET_KEY = '7=0zmldf)t4h0gd1d9y)#qfr4sa5otu*6jnoeuql@-25as!j!v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'https://django-awards.herokuapp.com/'
+]
 
 
 # Application definition
