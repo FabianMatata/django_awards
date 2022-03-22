@@ -13,22 +13,15 @@ from rest_framework.views import APIView
 from .serializer import ProfileSerializer,ProjectSerializer
 
 # Create your views here.
+
 def home(request):
     projects=project.objects.all()
-    return render(request,'awwards/home.html',{'projects':projects})
+    return render(request,'awwards/home.html',{'project':projects})
 
 @login_required(login_url='/accounts/login/') 
 def rate_project(request,project_id):
-    project=project.objects.get(id=project_id)
+    project=Project.objects.get(id=project_id)
     return render(request,"awwards/project.html",{"project":project})
-# def home(request):
-#     projects=project.objects.all()
-#     return render(request,'awwards/home.html',{'project':projects})
-
-# @login_required(login_url='/accounts/login/') 
-# def rate_project(request,project_id):
-#     project=Project.objects.get(id=project_id)
-#     return render(request,"awwards/project.html",{"project":project})
 
 
 @login_required(login_url='/accounts/login/') 
