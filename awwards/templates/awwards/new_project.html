@@ -17,8 +17,8 @@
         </div>
         <div class="panel-body" style="padding: 40px;">
             <form  action="" method="post" enctype="multipart/form-data" >
-                {%csrf_token%}
-                {% bootstrap_form form%}
+                {% csrf_token %}
+                {% bootstrap_form form %}
                 <input type="submit" class="btn btn-success" value="Submit">
             </form>
         </div>
@@ -31,7 +31,7 @@
   </div>
 </div>
 
-{% endblock %}
+{% endblock %} 
 
 
 

@@ -19,8 +19,8 @@ def home(request):
 
 @login_required(login_url='/accounts/login/') 
 def rate_project(request,project_id):
-    projects=Project.objects.get(id=project_id)
-    return render(request,"awwards/project.html",{"projects":projects})
+    project=Project.objects.get(id=project_id)
+    return render(request,"awwards/project.html",{"project":project})
 
 
 @login_required(login_url='/accounts/login/') 
@@ -123,9 +123,9 @@ class ProjectList(APIView):
 #         user=User.objects.create(
 #             username=data['username'],
 #             email=data['email'],
-#             password1=data['password']
+#             password1=data['password'],
 #             password2=data['password']
-#             if password1 == password2:
+#             if password1 == password2
 
 #         )
 #         profile=Profile.objects.create(
